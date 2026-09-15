@@ -5,7 +5,75 @@ TODO
 
 ## Carte des fichiers
 
-TODO
+pour public records
+
+Fichier	Lignes	Colonnes	Rôle métier principal
+registered_entities.csv	24	10	Répertoire des entreprises et entités légales enregistrées
+officer_filings.csv	136	12	Déclarations des dirigeants / officiers des entreprises
+licensed_facilities.csv	3	12	Établissements et sites agréés (avec coordonnées GPS)
+licensed_professionals.csv	53	10	Professionnels de santé / experts agréés et leur rattachement
+public_appointments.csv	62	12	Nominations publiques officielles et mandats institutionnels
+institutional_memos.csv	30	12	Mémos internes et communications institutionnelles
+public_and_investigative_documents.csv	40	11	Rapports d'enquête et documents publics d'investigation
+regulatory_case_events.csv	233	16	Historique / journal des dossiers réglementaires et sanctions
+site_access_case_events.csv	413	15	Journal des demandes d'accès physique aux sites / équipements
+
+                                  +---------------------------------------+
+                                  |         public_appointments           |
+                                  |---------------------------------------|
+                                  | - appointment_record_id (PK)          |
+                                  | - office_holder_name                  |
+                                  | - institution_name                    |
+                                  | - official_region                     |
+                                  +---------------------------------------+
+
+ +-----------------------------------+            +------------------------------------+
+ |        registered_entities        | 1        * |          officer_filings           |
+ |-----------------------------------|------------|------------------------------------|
+ | - registration_number (PK)        |            | - filing_id (PK)                   |
+ | - legal_name                      |            | - registration_number (FK)         |
+ | - parent_registration_number      |            | - full_name                        |
+ | - registered_entity_type          |            | - role_title                       |
+ +-----------------------------------+            +------------------------------------+
+       | 1                                
+       |                                  
+       | *                                
+ +-----------------------------------+            +------------------------------------+
+ |        licensed_facilities        | 1        * |       licensed_professionals       |
+ |-----------------------------------|------------|------------------------------------|
+ | - facility_license_number (PK)    |            | - license_number (PK)              |
+ | - operating_organization_reg (FK) |            | - primary_facility_license (FK)    |
+ | - facility_name                   |            | - professional_name, specialty     |
+ | - latitude, longitude             |            +------------------------------------+
+ +-----------------------------------+
+       | 
+       | (related_site_code / site_code)
+       +------------------------------------+
+       |                                    |
+       v                                    v
+ +-----------------------------------+    +------------------------------------+
+ |       regulatory_case_events      |    |      site_access_case_events       |
+ |-----------------------------------|    |------------------------------------|
+ | - regulatory_event_id (PK)        |    | - access_event_id (PK)             |
+ | - case_number                     |    | - access_case_number               |
+ | - subject_registration_number (FK)|    | - requesting_registration_num (FK) |
+ | - related_site_code               |    | - site_code                        |
+ | - related_shipment_number         |    | - event_time, activity, outcome    |
+ | - event_time, activity, outcome   |    +------------------------------------+
+ +-----------------------------------+                      |
+       ^                                                    |
+       | (related_case_number)                              |
+       +----------------------------+-----------------------+
+                                    |
+ +----------------------------------v+            +------------------------------------+
+ |        institutional_memos        |            | public_and_investigative_documents |
+ |-----------------------------------|            |------------------------------------|
+ | - document_id (PK)                |            | - document_id (PK)                 |
+ | - related_case_number (FK)        |            | - collection                       |
+ | - related_purchase_order (FK)     |            | - document_type, title             |
+ | - related_shipment_number (FK)    |            | - author_name, author_organization |
+ | - document_type, author_name      |            | - text, public_or_restricted       |
+ +-----------------------------------+            +------------------------------------+
 
 Sur ce repository, vous pourrez trouver l’ensemble des éléments
 nécessaire au projet de groupe de l’UE Data Mining pour l’année 2026-2027.
