@@ -4,6 +4,56 @@
 TODO
 
 ## Carte des fichiers
+ecology
+
+<img width="976" height="511" alt="image" src="https://github.com/user-attachments/assets/68c1a212-f2d7-41ba-980c-611e65fc7274" />
+
+<img width="938" height="216" alt="image" src="https://github.com/user-attachments/assets/23f0c797-bc81-4494-806d-954d6e5a66cc" />
+
+
+                            +-------------------------------------------+
+                            |             monitoring_sites              |
+                            |-------------------------------------------|
+                            | - site_code (PK)                          |
+                            | - site_name, region, habitat_category     |
+                            | - latitude, longitude, elevation_m        |
+                            +-------------------------------------------+
+                                  |
+                                  | 1
+                                  +--------------------+---------------------+--------------------+
+                                  | *                  | *                   | *                  | *
+    +-----------------------------v----+    +----------v----------+    +-----v--------------+    +v------------------------+
+    |           bat_surveys            |    |   orchard_surveys   |    |environmental_month |    |monitoring_device_operat.|
+    |----------------------------------|    |---------------------|    |--------------------|    |-------------------------|
+    | - survey_id (PK)                 |    | - orchard_survey_id |    | - site_code (FK)   |    | - device_operation_id   |
+    | - site_code (FK)                 |    | - site_code (FK)    |    | - reporting_month  |    | - site_code (FK)        |
+    | - colony_estimate, visit_count   |    | - fruit_set_rate_pct|    | - mean_temp, rain  |    | - device_reference      |
+    | - observed_bat_count             |    | - durian_yield_kg   |    | - pesticide_index  |    | - uptime_pct, fault_code|
+    +----------------------------------+    +---------------------+    +--------------------+    +-------------------------+
+                    ^                                                                                         ^
+                    | (related_survey_id)                                           (related_device_reference)|
+                    +-----------------------------+-----------------------------------------------------------+
+                                                  |
+                                   +--------------v---------------------+
+                                   |    environmental_field_reports     |
+                                   |------------------------------------|
+                                   | - document_id (PK)                 |
+                                   | - site_code (FK)                   |
+                                   | - reporting_period, title, text    |
+                                   +------------------------------------+
+
+
+
+
+<img width="960" height="411" alt="image" src="https://github.com/user-attachments/assets/b574b4a4-ba21-4c37-b144-d1f1847022e5" />
+
+<img width="975" height="304" alt="image" src="https://github.com/user-attachments/assets/fe64947b-1a90-4309-bac7-27fc3ea96368" />
+
+                                 
+
+<img width="949" height="394" alt="image" src="https://github.com/user-attachments/assets/85dc2408-9e64-433d-8fef-8174a27d6013" />
+
+<img width="1023" height="273" alt="image" src="https://github.com/user-attachments/assets/5d4835e7-294a-45a4-a841-6a5a8345be47" />
 
 pour public records
 <img width="957" height="387" alt="image" src="https://github.com/user-attachments/assets/987df92b-6939-4f2f-aa59-60c3b40b6181" />
@@ -12,62 +62,6 @@ pour public records
 <img width="935" height="444" alt="image" src="https://github.com/user-attachments/assets/a898eb2f-7c12-4c64-8942-d71df9920d8d" />
 
 
-                                  +---------------------------------------+
-                                  |         public_appointments           |
-                                  |---------------------------------------|
-                                  | - appointment_record_id (PK)          |
-                                  | - office_holder_name                  |
-                                  | - institution_name                    |
-                                  | - official_region                     |
-                                  +---------------------------------------+
-
- +-----------------------------------+            +------------------------------------+
- |        registered_entities        | 1        * |          officer_filings           |
- |-----------------------------------|------------|------------------------------------|
- | - registration_number (PK)        |            | - filing_id (PK)                   |
- | - legal_name                      |            | - registration_number (FK)         |
- | - parent_registration_number      |            | - full_name                        |
- | - registered_entity_type          |            | - role_title                       |
- +-----------------------------------+            +------------------------------------+
-       | 1                                
-       |                                  
-       | *                                
- +-----------------------------------+            +------------------------------------+
- |        licensed_facilities        | 1        * |       licensed_professionals       |
- |-----------------------------------|------------|------------------------------------|
- | - facility_license_number (PK)    |            | - license_number (PK)              |
- | - operating_organization_reg (FK) |            | - primary_facility_license (FK)    |
- | - facility_name                   |            | - professional_name, specialty     |
- | - latitude, longitude             |            +------------------------------------+
- +-----------------------------------+
-       | 
-       | (related_site_code / site_code)
-       +------------------------------------+
-       |                                    |
-       v                                    v
- +-----------------------------------+    +------------------------------------+
- |       regulatory_case_events      |    |      site_access_case_events       |
- |-----------------------------------|    |------------------------------------|
- | - regulatory_event_id (PK)        |    | - access_event_id (PK)             |
- | - case_number                     |    | - access_case_number               |
- | - subject_registration_number (FK)|    | - requesting_registration_num (FK) |
- | - related_site_code               |    | - site_code                        |
- | - related_shipment_number         |    | - event_time, activity, outcome    |
- | - event_time, activity, outcome   |    +------------------------------------+
- +-----------------------------------+                      |
-       ^                                                    |
-       | (related_case_number)                              |
-       +----------------------------+-----------------------+
-                                    |
- +----------------------------------v+            +------------------------------------+
- |        institutional_memos        |            | public_and_investigative_documents |
- |-----------------------------------|            |------------------------------------|
- | - document_id (PK)                |            | - document_id (PK)                 |
- | - related_case_number (FK)        |            | - collection                       |
- | - related_purchase_order (FK)     |            | - document_type, title             |
- | - related_shipment_number (FK)    |            | - author_name, author_organization |
- | - document_type, author_name      |            | - text, public_or_restricted       |
- +-----------------------------------+            +------------------------------------+
 
 Sur ce repository, vous pourrez trouver l’ensemble des éléments
 nécessaire au projet de groupe de l’UE Data Mining pour l’année 2026-2027.
