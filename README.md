@@ -6,17 +6,11 @@ TODO
 ## Carte des fichiers
 
 pour public records
+<img width="957" height="387" alt="image" src="https://github.com/user-attachments/assets/987df92b-6939-4f2f-aa59-60c3b40b6181" />
 
-Fichier	Lignes	Colonnes	Rôle métier principal
-registered_entities.csv	24	10	Répertoire des entreprises et entités légales enregistrées
-officer_filings.csv	136	12	Déclarations des dirigeants / officiers des entreprises
-licensed_facilities.csv	3	12	Établissements et sites agréés (avec coordonnées GPS)
-licensed_professionals.csv	53	10	Professionnels de santé / experts agréés et leur rattachement
-public_appointments.csv	62	12	Nominations publiques officielles et mandats institutionnels
-institutional_memos.csv	30	12	Mémos internes et communications institutionnelles
-public_and_investigative_documents.csv	40	11	Rapports d'enquête et documents publics d'investigation
-regulatory_case_events.csv	233	16	Historique / journal des dossiers réglementaires et sanctions
-site_access_case_events.csv	413	15	Journal des demandes d'accès physique aux sites / équipements
+
+<img width="935" height="444" alt="image" src="https://github.com/user-attachments/assets/a898eb2f-7c12-4c64-8942-d71df9920d8d" />
+
 
                                   +---------------------------------------+
                                   |         public_appointments           |
