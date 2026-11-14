@@ -46,7 +46,7 @@ Le cheminement de l'enquête (pistes suivies, questions posées, hypothèses, pi
 - **Logistique :** Horizon envoie des échantillons biologiques à Meridian Biologistics, qui livre ensuite les établissements où les dirigeants reçoivent le `MRP-42`.
 - **Croisements :** les chauves-souris baissent après chaque visite d'Horizon, et plusieurs patients atypiques se retrouvent sous un nom proche dans les registres publics.
 
-**Narratif :** Horizon prélève des chauves-souris dans les grottes, Meridian en tire un traitement (`MRP-42`) donné à des dirigeants qui vieillissent moins vite et changent d'identité. Les patients atypiques correspondent à ces identités, et des documents internes parlent d'êtres non humains (« Chamaeleonidian »). Les détails, les chiffres et les limites sont dans [`06_rapport_final.ipynb`](06_rapport_final.ipynb).
+**Narratif :** Horizon prélève des chauves-souris dans les grottes, et Meridian en tire un traitement (`MRP-42`) donné à des dirigeants qui vieillissent moins vite. Les patients atypiques vivent sous des identités successives depuis le XIXe siècle. Des documents internes les décrivent comme des êtres non humains proches du caméléon (« Chamaeleonidian », « Unwabu » = caméléon en zoulou). Les détails, les chiffres et les limites sont dans [`06_rapport_final.ipynb`](06_rapport_final.ipynb). 
 
 ## 4. Ordre d'exécution
 

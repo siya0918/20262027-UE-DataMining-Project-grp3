@@ -79,6 +79,7 @@ grotte (Horizon, la nuit) → échantillons biologiques vers Meridian → livrai
   - des chauves-souris *Eonycteris spelaea* vivantes sont collectées, puis « consommées » ;
   - la population de patients atypiques est désignée par un terme non humain, « Chamaeleonidian », comme le code CHAMELEO ;
   - certains envois partent vers une destination non terrestre.
+- « Unwabu », l'autorité citée dans les mémos, est le nom zoulou du caméléon : dans le mythe, c'est lui qui devait apporter l'immortalité aux hommes. Ça rejoint le code CHAMELEO, le terme « Chamaeleonidian » et les traits des patients atypiques (yeux indépendants, démarche qui se balance, mal vus par les caméras).
 
 ## 6. Où en est-on ?
 
@@ -89,13 +90,14 @@ grotte (Horizon, la nuit) → échantillons biologiques vers Meridian → livrai
 - Les patients atypiques vivent sous des noms légèrement modifiés, et des dirigeants de sociétés se remplacent depuis le XIXe siècle.
 
 **Ce que les documents décrivent**
-- Les patients atypiques seraient une population cachée non humaine (« Chamaeleonidian »), qui change d'identité au fil des siècles et dirige Meridian (Elias Voss).
+- Les patients atypiques seraient une population cachée non humaine et proche du caméléon (« Chamaeleonidian », « Unwabu »), qui change d'identité au fil des siècles et dirige Meridian (Elias Voss).
 - Les chauves-souris collectées serviraient à préparer MRP-42 ; une partie partirait vers une destination non terrestre.
 
 **Notre conclusion**
-Une population cachée, non humaine selon les documents, fait capturer des chauves-souris dans les grottes. Elle s'en sert pour préparer MRP-42, un traitement qui garde jeunes et au pouvoir des dirigeants humains.
+Une population cachée, non humaine et proche du caméléon selon les documents, fait capturer des chauves-souris dans les grottes. Elle s'en sert pour préparer MRP-42, un traitement qui garde jeunes et au pouvoir des dirigeants humains.
 
 **Ce qu'on ne peut pas prouver**
 - Le contenu exact des colis : seule la catégorie déclarée est connue, et elle peut être fausse.
 - La nature non humaine des patients atypiques : elle vient de documents, pas de mesures.
-- Le rôle de l'autorité « Unwabu » et la destination finale des envois.
+- Le sens d'« Unwabu » (caméléon) : il vient d'une recherche extérieure sur la mythologie zouloue, pas des données.
+- Pourquoi cette population donne MRP-42 aux dirigeants, et où partent les envois non terrestres.
